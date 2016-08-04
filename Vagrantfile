@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  config.vm.network "private_network", ip: "192.168.121.138"
+  config.vm.network "private_network", ip: "192.168.122.138"
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -53,8 +53,8 @@ Vagrant.configure("2") do |config|
     echo "
     startup_message off
     sessionname mesos
-    screen -t mesos-master 0 sudo mesos-master --ip=192.168.121.138 --work_dir=/var/lib/mesos
-    screen -t mesos-agent 1 sudo mesos-agent --master=192.168.121.138:5050 --work_dir=/var/lib/mesos
+    screen -t mesos-master 0 sudo mesos-master --ip=192.168.122.138 --work_dir=/var/lib/mesos
+    screen -t mesos-agent 1 sudo mesos-agent --master=192.168.122.138:5050 --work_dir=/var/lib/mesos
     " > mesos.screen
     screen -c mesos.screen
     screen -d mesos
