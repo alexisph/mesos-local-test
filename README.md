@@ -11,5 +11,5 @@ Run the following to provision the VM, download and install Apache Mesos v1.0.0:
   vagrant up --provider libvirt
 ```
 
-Apache Mesos should be up on http://192.168.121.138:5050
+Apache Mesos should be up on http://mesos-test:5050
 
